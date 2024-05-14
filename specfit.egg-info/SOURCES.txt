@@ -1,0 +1,9 @@
+setup.py
+specfit/__init__.py
+specfit/config.py
+specfit/model.py
+specfit.egg-info/PKG-INFO
+specfit.egg-info/SOURCES.txt
+specfit.egg-info/dependency_links.txt
+specfit.egg-info/requires.txt
+specfit.egg-info/top_level.txt

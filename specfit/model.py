@@ -10,8 +10,11 @@ from copy import copy
 def gauss(x, central_wav, fwhm_vel, norm):
     sigma_vel = fwhm_vel/2.355
     sigma = sigma_vel*central_wav/2.998e5
-    gauss = (norm/(sigma*np.sqrt(2*np.pi)))
-    gauss *= np.exp(-0.5*(x-central_wav)**2/sigma**2)
+    sigma = np.max([sigma,np.diff(x)[np.argmin(np.abs(x-central_wav))]])
+    gauss = np.exp(-0.5*np.power((x-central_wav)/sigma,2))
+    xrange = np.abs((x-central_wav)/sigma)<5
+    gauss /= np.trapz(gauss[xrange], x=x[xrange])
+    gauss *= norm
     return gauss
 
 def _get_wavelength_sampling(wav_obs, mc):

@@ -38,6 +38,7 @@ class fitter:
         self.bff_fitter.fit(verbose=verbose, n_live=n_live, use_MPI=use_MPI)
 
     def get_advanced_quantities(self):
+        self.bff_fitter._print_results()
 
         from mpi4py import MPI
         comm = MPI.COMM_WORLD

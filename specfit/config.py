@@ -9,7 +9,7 @@ import numpy as np
 linelist = Table(names=['name','label','wav'],dtype=[str,str,float])
 linelist.add_row(['Lya',       r'${\rm Ly}\alpha$',                                      1215.670])
 linelist.add_row(['CII',       r'${\rm C}\,\textsc{ii}$',                                1335.708])
-linelist.add_row(['CIV',       r'${\rm C}\,\textsc{iv}]\,\lambda\lambda 1548,1551$',    1549.480])
+linelist.add_row(['CIV',       r'${\rm C}\,\textsc{iv}]\,\lambda\lambda 1548,1551$',     1549.480])
 linelist.add_row(['HeII',      r'He\,II\,$\lambda 1640$',                                1640.400])
 linelist.add_row(['CIII',      r'${\rm C}\,\textsc{iii}]\,\lambda 1909$',                1908.734])
 linelist.add_row(['NeIV',      r'$[{\rm Ne}\,\textsc{iv}]\,\lambda 2423$',               2439.500])
